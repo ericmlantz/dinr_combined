@@ -11,7 +11,7 @@ const {restart} = require('nodemon')
 require('dotenv').config()
 //------
 
-const uri = 'mongodb+srv://dinruser:matthew12@Cluster0.8uknu.mongodb.net/app-data?retryWrites=true&w=majority'
+const uri = process.env.MONGODB_URI
 
 const app = express()
 app.use(cors())
