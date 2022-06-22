@@ -13,7 +13,7 @@ html,body {
 .primary-title {
   font-size: 90px;
   color: white;
-  margin: 10px 0px 0px 0px;
+  margin: 10px 0 0 0px;
   font-weight: 400;
   text-shadow: 2px 2px 4px #777777;
 }
@@ -22,7 +22,7 @@ html,body {
   font-style: italic;
   font-size: 35px;
   color: white;
-  margin: 0px 0px 20px 0px;
+  margin: 0 0 20px 0;
   font-weight: 500;
   text-shadow: 2px 2px 4px #777777;
 }
