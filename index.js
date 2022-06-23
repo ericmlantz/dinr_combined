@@ -6,6 +6,7 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const cors = require('cors')
 const {restart} = require('nodemon')
+const logger = require('morgan')
 
 //Added for deploy
 require('dotenv').config()
@@ -16,13 +17,14 @@ const uri = process.env.MONGODB_URI
 const app = express()
 app.use(cors())
 app.use(express.json())
-
+app.use(express.urlencoded({ extended: true }))
 //added for deploy
+app.use(logger('dev'))
 app.use(express.static(`${__dirname}/client/build`))
 //--------
 
 app.get('/', (req, res) => {
-  res.json('Hello to my app')
+  res.send('Hello to my app')
 })
 
 //------------Sign Up----------
