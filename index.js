@@ -12,7 +12,7 @@ const logger = require('morgan')
 require('dotenv').config()
 //------
 
-const uri = process.env.MONGODB_URI
+const uri = 'mongodb+srv://dinruser:matthew12@cluster0.8uknu.mongodb.net/?retryWrites=true&w=majority'
 
 const app = express()
 app.use(cors())
