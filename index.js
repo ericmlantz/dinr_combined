@@ -20,7 +20,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 //added for deploy
 app.use(logger('dev'))
-app.use(express.static(`${__dirname}/client/build`))
+// app.use(express.static(`${__dirname}/client/build`))
 //--------
 
 app.get('/', (req, res) => {
@@ -442,9 +442,9 @@ app.post('/message', async (req, res) => {
 })
 
 //added for deploy
-app.get('/*', (req, res) => {
-  res.sendFile(`${__dirname}/client/build/index.html`)
-})
+// app.get('/*', (req, res) => {
+//   res.sendFile(`${__dirname}/client/build/index.html`)
+// })
 //--------
 
 app.listen(PORT, () => console.log("Server running on PORT " + PORT))
